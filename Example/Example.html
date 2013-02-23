@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bootstrap-AcknowledgeInput.js Example</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/prettify.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/prettify.js"></script>
+    <style type="text/css">
+        h2{border-bottom:1px solid #ccc;}
+      .container-fluid{margin-top:80px;}
+    </style>
+    </head>
+    <body onload="prettyPrint()">
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                    <h1>Bootstrap-AcknowledgeInput.js <small>Providing feedback to user input</small></h1>
+            </div>
+        </div>
+        <div class="container-fluid">
+
+        <div class="row-fluid">
+            <div class="span3 well affix">
+                <ul class="nav nav-list" id="navbar">
+                  <li class="nav-header">Bootstrap-AcknowledgeInput.js</li>
+                  <li><a href="#examples">Examples</a></li>
+                  <li><a href="#using">Using Bootstrap-AcknowledgeInput.js</a></li>
+                  <li><a href="#options">Options</a></li>
+                  <li><a href="#layout">Layout Variations</a></li>
+                  <li><a href="#inputs">Supported Inputs</a></li>
+                </ul>
+                <h4>About</h4>
+                <p class="muted">
+                    A small bootstrap plugin that provide form input controls that feedback to the user as to whether their input was valid. <br/>
+                    <strong>Pelase Note:</strong> This plugin does <strong>NOT</strong> restrict form input/submission, it just provides visual feedback to the user. 
+                </p>
+                <!--
+                <h4>Download</h4>
+                <a href="#" class="btn btn-primary">Download Latest Version</a>
+                -->
+                <h4>Change Log</h4>
+                <p class="muted">
+                    <h5>v0.1 23/2/2013</h5>
+                    <ul>
+                        <li>Initial Release</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="offset3 span8">
+                <div class="span11">
+                    <h2 id="examples" style="padding-top: 80px; margin-top: -80px;">Examples</h2>
+                    <form>
+                        <fieldset>
+                            <legend>Layout Options</legend>
+                            <table class="table table-bordered">
+                                <tr><th>&nbsp;</th><th>Input Required</th><th>Input Not Required</th></tr>
+                                <tr>
+                                    <th>Append</th>
+                                    <td>
+                                        <div class="span12 input-append" data-role="acknowledge-input">
+                                            <input type="text" required="required" placeholder="Any Text Required" class="input-xlarge" />
+                                            <div data-role="acknowledgement"><i></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="span12 input-xlarge input-append" data-role="acknowledge-input">
+                                            <input type="text" placeholder="Any text optional" class="input-xlarge"  />
+                                            <div data-role="acknowledgement"><i></i></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Prepend</th>
+                                    <td>
+                                        <div class="span12 input-prepend" data-role="acknowledge-input">
+                                            <div data-role="acknowledgement"><i></i></div>
+                                            <input type="text" required="requried" placeholder="Any Text Required" class="input-xlarge" />
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="span12 input-prepend" data-role="acknowledge-input">
+                                            <div data-role="acknowledgement"><i></i></div>
+                                            <input type="text" placeholder="Any Text Optional" class="input-xlarge" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Both</th>
+                                    <td>
+                                        <div class="span12 input-prepend input-append" data-role="acknowledge-input">
+                                            <div class="add-on"><i class="icon-file-alt"></i></div>
+                                            <input type="text" required="required" placeholder="Any Text Required" class="input-xlarge" />
+                                            <div data-role="acknowledgement"><i></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="span12 input-prepend input-append" data-role="acknowledge-input">
+                                            <div class="add-on"><i class="icon-file-alt"></i></div>
+                                            <input type="text" placeholder="Any Text Optional" class="input-xlarge" />
+                                            <div data-role="acknowledgement"><i></i></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Data Types</legend>
+                            <table class="table table-bordered">
+                                <tr><th>Type</th><th>Input</th><th>Examples</th></tr>
+                                <tr>
+                                    <th>Text</th>
+                                    <td>
+                                        <div class="span12 input-append" data-role="acknowledge-input">
+                                            <input type="text" required="required" placeholder="Any Text Required" class="input-xlarge" data-type="text" />
+                                            <div data-role="acknowledgement"><i></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        "Bootstrap" 
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>
+                                        <div class="span12 input-append" data-role="acknowledge-input">
+                                            <input type="text" required="required" placeholder="Email Required" class="input-xlarge" data-type="email" />
+                                            <div data-role="acknowledgement"><i></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        Example@example.com
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Telephone Number</th>
+                                    <td>
+                                        <div class="span12 input-append" data-role="acknowledge-input">
+                                            <input type="text" required="required" placeholder="Telephon Number Required" class="input-xlarge" data-type="tel" />
+                                            <div data-role="acknowledgement"><i></i></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        +(44)1234 56789<br/>
+                                        0111 111 111 111<br/>
+                                        (0123456459) 13345678
+                                    </td>
+                                </tr>
+                            </table>
+                        </fieldset>
+                    </form>                 
+                    <h2 id="using" style="padding-top: 80px; margin-top: -80px;">Using Bootstrap-AcknowledgeInput.js</h2>
+                    <ol>
+                        <li>Make sure you include all the required files:</li>
+<pre class="prettyprint">
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+        &lt;link rel="stylesheet" href="css/font-awesome.min.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!-- PAGE CONTENT --&gt;
+        &lt;script type="text/javascript" src="js/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="js/bootstrap.min.js" &gt;&lt;/script&gt;
+        &lt;script type="text/javascript" src="js/bootstrap-acknowledgeinput.min.js" &gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt; 
+</pre>
+                    <li>Define your form with new acknowledge inputs</li>
+<pre class="prettyprint">
+&lt;form&gt;
+    &lt;label&gt;Username&lt;/label&gt;
+    &lt;div class=&quot;input-append&quot; data-role=&quot;acknowledge-input&quot;&gt;
+        &lt;input type=&quot;text&quot; required=&quot;required&quot; placeholder=&quot;Any Text Required&quot; data-type=&quot;text&quot; /&gt;
+        &lt;div data-role=&quot;acknowledgement&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</pre>      
+                    <p class="text-info">
+                        The key things to note here is the use of <code>data-role</code> and <code>data-type</code> (optional). <br/>
+                        The <code>data-type</code> attribute tells the plugin what format the input text should be to warrant a success.<br/>
+                        The current <code>data-type</code> options are <code>text</code> (default), <code>email</code> and <code>tel</code>.
+                    </p>
+                    <li>Call the plugin on document ready</li>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $().ready(function() {
+        $().acknowledgeinput();
+    });
+&lt;/script&gt;
+</pre>
+                    </ol>
+                    <h2 id="options" style="padding-top: 80px; margin-top: -80px;">Options</h2>
+                    <table class="table table-bordered table-striped">
+                        <tr>
+                            <th>Name</th><th>Type</th><th>Default</th><th>Description</th>
+                        </tr>
+                        <tr>
+                            <td>success_color</td>
+                            <td>color</td>
+                            <td><span style="color:#468847">#468847</span></td>
+                            <td>Sets the colour of the icon upon a successful match.<br/>Please Note: This requires font-awesome as the default bootstrap icons don't support different colours.</td>
+                        </tr>
+                        <tr>
+                            <td>danger_color</td>
+                            <td>color</td>
+                            <td><span style="color:#bd362f">#bd362f</span></td>
+                            <td>Sets the colour of the icon upon a failed match.<br/>Please Note: This requires font-awesome as the default bootstrap icons don't support different colours.</td>
+                        </tr>
+                        <tr>
+                            <td>icon_success</td>
+                            <td>icon class</td>
+                            <td>icon-ok</td>
+                            <td>Sets the icon to display upon a successful match.</td>
+                        </tr>
+                        <tr>
+                            <td>icon_danger</td>
+                            <td>icon class</td>
+                            <td>icon-warning-sign</td>
+                            <td>Sets the icon to display upon a failed match.</td>
+                        </tr>
+                        <tr>
+                            <td>update_on</td>
+                            <td>event</td>
+                            <td>change</td>
+                            <td>Sets the event to perform the icon update method. Possible options are <code>change</code>, <code>keydown</code>, <code>keyup</code>, <code>focus</code> & <code>blur</code>.</td>
+                        </tr>
+                    </table>
+                    <h3>Options Example</h3>
+<pre class="prettyprint">
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $().ready(function() {
+        $().acknowledgeinput({
+            success_color: '#00FF00',
+            danger_color: '#FF0000',
+            update_on: 'keyup'
+        });
+    });
+&lt;/script&gt;
+</pre>      
+                <h2 id="layout" style="padding-top: 80px; margin-top: -80px;">Layout Variations</h2>
+                <h3>Append</h3>
+                <div class="input-append" data-role="acknowledge-input">
+                    <input type="text" required="required" placeholder="Any Text Required" />
+                    <div data-role="acknowledgement"><i></i></div>
+                </div>
+<pre class="prettyprint">
+&lt;div class=&quot;input-append&quot; data-role=&quot;acknowledge-input&quot;&gt;
+    &lt;input type=&quot;text&quot; required=&quot;required&quot; placeholder=&quot;Any Text Required&quot; /&gt;
+    &lt;div data-role=&quot;acknowledgement&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                <h3>Prepend</h3>
+                <div class="input-prepend" data-role="acknowledge-input">
+                    <div data-role="acknowledgement"><i></i></div>
+                    <input type="text" required="required" placeholder="Any Text Required" />
+                </div>
+<pre class="prettyprint">
+&lt;div class=&quot;input-prepend&quot; data-role=&quot;acknowledge-input&quot;&gt;
+    &lt;div data-role=&quot;acknowledgement&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;input type=&quot;text&quot; required=&quot;required&quot; placeholder=&quot;Any Text Required&quot; /&gt;
+&lt;/div&gt;
+</pre>
+                <h3>With additional icon</h3>
+                <div class="input-prepend input-append" data-role="acknowledge-input">
+                    <div class="add-on"><i class="icon-envelope"></i></div>
+                    <input type="text" required="required" placeholder="Any Text Required" />
+                    <div data-role="acknowledgement"><i></i></div>
+                </div>
+<pre class="prettyprint">
+&lt;div class=&quot;input-prepend input-append&quot; data-role=&quot;acknowledge-input&quot;&gt;
+    &lt;div class=&quot;add-on&quot;&gt;&lt;i class=&quot;icon-envelope&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+    &lt;input type=&quot;text&quot; required=&quot;required&quot; placeholder=&quot;Any Text Required&quot; /&gt;
+    &lt;div data-role=&quot;acknowledgement&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                <h2 id="inputs" style="padding-top: 80px; margin-top: -80px;">Supported Inputs</h2>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Input [type="text"]</th>
+                        <td>
+                            <div class="span12 input-append" data-role="acknowledge-input">
+                                <input type="text" required="required" class="input-xlarge" />
+                                <div data-role="acknowledgement"><i></i></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Input [type="password"]</th>
+                        <td>
+                            <div class="span12 input-append" data-role="acknowledge-input">
+                                <input type="password" required="required" class="input-xlarge" />
+                                <div data-role="acknowledgement"><i></i></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Input [type="email", data-type="email"]</th>
+                        <td>
+                            <div class="span12 input-append" data-role="acknowledge-input">
+                                <input type="email" required="required" class="input-xlarge" data-type="email" />
+                                <div data-role="acknowledgement"><i></i></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Textarea</th>
+                        <td>
+                            <div class="span12 input-append" data-role="acknowledge-input">
+                                <textarea required="required" class="input-xlarge"></textarea>
+                                <div data-role="acknowledgement"><i></i></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Select Dropdown</th>
+                        <td>
+                            <div class="span12 input-append" data-role="acknowledge-input">
+                                <select required="required" class="input-xlarge"><option value="">Please select a value</option><option>Example</option><option>Another Example</option></select>
+                                <div data-role="acknowledgement"><i></i></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Select Listbox</th>
+                        <td>
+                            <p class="text-warning">Not currently supported</p>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Input [type="checkbox"], Input [type="radio"]</th>
+                        <td>
+                            <p class="text-error">No planned support</p>
+                            
+                        </td>
+                    </tr>
+                </table>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js" ></script>
+        <!--<script type="text/javascript" src="js/bootstrap-acknowledgeinput.min.js" ></script>-->
+        <script type="text/javascript" src="..//bootstrap-acknowledgeinput.min.js" ></script>
+        <script type="text/javascript">
+            $().ready(function() {
+                $().acknowledgeinput();
+                $('body').scrollspy({offset:85});
+            });
+        </script>
+    </body>
+</html>
