@@ -5,6 +5,18 @@ A small bootstrap plugin that provide form input controls that feedback to the u
 
 http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/ for examples and more options.
 
+An example is provided that includes all necessary javascript and stylesheets.
+
+Required
+===================================
+- jQuery - http://jquery.com/ 
+- Bootstrap - http://twitter.github.com/bootstrap/
+
+Recommended
+===================================
+- Font-Awesome - https://github.com/FortAwesome/Font-Awesome
+
+
 Using Bootstrap-AcknowledgeInput.js
 ===================================
 
