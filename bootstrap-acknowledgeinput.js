@@ -1,6 +1,6 @@
 /* =========================================================
  * bootstrap-acknowledgeinput.js
- * https://github.com/AverageMarcus/Bootstrap-AcknowledgeInputs
+ * http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/
  * =========================================================
  * Requirements:
  * --------------

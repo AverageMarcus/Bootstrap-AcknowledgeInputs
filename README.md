@@ -3,6 +3,8 @@ Bootstrap-AcknowledgeInputs
 
 A small bootstrap plugin that provide form input controls that feedback to the user as to whether their input was valid.
 
+http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/ for examples and more options.
+
 Using Bootstrap-AcknowledgeInput.js
 ===================================
 
