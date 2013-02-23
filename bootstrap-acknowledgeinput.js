@@ -29,10 +29,7 @@
  * ========================================================= */
 
 (function( $ ) {   
-    "use strict"; 
-    // Acknowledge Inputs
-    // TODO: Support select listbox
-    
+    "use strict";     
     $.fn.acknowledgeinput = function(options){
         var acknowledgeVars = {
             success_color: "#468847",
