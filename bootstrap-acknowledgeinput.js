@@ -47,7 +47,11 @@
                 var colour = isSuccess ? acknowledgeVars.success_color : acknowledgeVars.danger_color;
                 inputEl.parent().find('[data-role=acknowledgement]').css('color', colour).find('i').removeClass().addClass(iconClass);
             }
+            function isNotNullOrEmpty(value){
+                return (inputEl.val() !== "" && inputEl.val() !== null);
+            }
 
+            console.log(inputEl.val());
             //Setup default
             inputEl.parent().find('[data-role=acknowledgement]').addClass('add-on').find('i').removeClass();
             var re;
@@ -55,7 +59,7 @@
             var required = inputEl.attr("required") === undefined ? false : inputEl.attr("required").toLowerCase() === "required";
 
             if (data_type.toLowerCase() === "text") {
-                if (inputEl.val() !== "") {
+                if (isNotNullOrEmpty(inputEl.val())) {
                     modify_classes(true, acknowledgeVars.icon_success);
                 } else if (required) {
                     modify_classes(false, acknowledgeVars.icon_danger);
@@ -64,18 +68,18 @@
                 re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 var isEmail = re.test(inputEl.val());
 
-                if (inputEl.val() !== "" && isEmail) {
+                if (isNotNullOrEmpty(inputEl.val()) && isEmail) {
                     modify_classes(true, acknowledgeVars.icon_success);
-                } else if (required || (inputEl.val() !== "" && !isEmail)) {
+                } else if (required || (isNotNullOrEmpty(inputEl.val()) && !isEmail)) {
                     modify_classes(false, acknowledgeVars.icon_danger);
                 }
             } else if (data_type.toLowerCase() === "tel") {
                 re = /^(\+)?( |-|\(|\)|[0-9]){4,50}$/;
                 var isTel = re.test(inputEl.val());
 
-                if (inputEl.val() !== "" && isTel) {
+                if (isNotNullOrEmpty(inputEl.val()) && isTel) {
                     modify_classes(true, acknowledgeVars.icon_success);
-                } else if (required || (inputEl.val() !== "" && !isTel)) {
+                } else if (required || (isNotNullOrEmpty(inputEl.val()) && !isTel)) {
                     modify_classes(false, acknowledgeVars.icon_danger);
                 }
             }
