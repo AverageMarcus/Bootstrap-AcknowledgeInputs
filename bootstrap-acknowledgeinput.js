@@ -47,8 +47,6 @@
             function isNotNullOrEmpty(value){
                 return (inputEl.val() !== "" && inputEl.val() !== null);
             }
-
-            console.log(inputEl.val());
             //Setup default
             inputEl.parent().find('[data-role=acknowledgement]').addClass('add-on').find('i').removeClass();
             var re;
