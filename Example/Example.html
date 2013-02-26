@@ -9,49 +9,58 @@
     <script type="text/javascript" src="js/prettify.js"></script>
     <style type="text/css">
         h2{border-bottom:1px solid #ccc;}
-      .container-fluid{margin-top:80px;}
+        .container-fluid{margin-top:80px;}
+        @media (max-width: 480px) {
+            #navHolder{ position:relative;margin-top:-50px;} 
+        }
+        @media (max-height: 600px) {
+            #navHolder{ position:absolute;} 
+        }
     </style>
     </head>
     <body onload="prettyPrint()">
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
-                    <h1>Bootstrap-AcknowledgeInput.js <small>Providing feedback to user input</small></h1>
+                <h1>Bootstrap-AcknowledgeInput.js <small>Providing feedback to user input</small></h1>
             </div>
         </div>
         <div class="container-fluid">
 
         <div class="row-fluid">
-            <div class="span3 well affix">
+            <div class="span3 well affix" id="navHolder">
                 <ul class="nav nav-list" id="navbar">
                   <li class="nav-header">Bootstrap-AcknowledgeInput.js</li>
+                  <li><a href="#about">About</a></li>
                   <li><a href="#examples">Examples</a></li>
                   <li><a href="#using">Using Bootstrap-AcknowledgeInput.js</a></li>
                   <li><a href="#options">Options</a></li>
                   <li><a href="#layout">Layout Variations</a></li>
                   <li><a href="#inputs">Supported Inputs</a></li>
+                  <li><a href="#changelog">Change Log</a></li>
+                  <li class="divider"></li>
                 </ul>
-                <h4>About</h4>
-                <p class="muted">
-                    A small bootstrap plugin that provide form input controls that feedback to the user as to whether their input was valid. <br/>
-                    <strong>Pelase Note:</strong> This plugin does <strong>NOT</strong> restrict form input/submission, it just provides visual feedback to the user. 
+                <p>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=averagemarcus&repo=Bootstrap-AcknowledgeInputs&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=averagemarcus&repo=Bootstrap-AcknowledgeInputs&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" width="100" height="20"></iframe>
+                    <iframe src="http://ghbtns.com/github-btn.html?user=AverageMarcus&repo=Bootstrap-AcknowledgeInputs&type=follow&count=true" allowtransparency="true" frameborder="0" scrolling="0" height="20"></iframe>
                 </p>
                 <h4>Download</h4>
-                <a href="https://raw.github.com/AverageMarcus/Bootstrap-AcknowledgeInputs/master/bootstrap-acknowledgeinput.min.js" class="btn btn-primary">Download Latest Version</a>
-                <h4>Change Log</h4>
-                <p class="muted">
-                    <h5>v0.2 23/2/2013</h5>
-                    <ul>
-                        <li>Fixed select listbox support</li>
-                        <li>Added additional data-type support (numbers, integer, decimal, currency, colour and URL)</li>
-                    </ul>
-                    <h5>v0.1 23/2/2013</h5>
-                    <ul>
-                        <li>Initial Release</li>
-                    </ul>
-                </p>
+                <a href="https://raw.github.com/AverageMarcus/Bootstrap-AcknowledgeInputs/master/bootstrap-acknowledgeinput.min.js" class="btn btn-primary">Download Latest Version</a><br/>
+                <small>Last Updated: 26/2/2013 (v0.3)</small>
+                <h4>Resources</h4>
+                <ul class="nav nav-list" id="navbar">
+                  <li><a href="http://jquery.com/">jQuery</a></li>
+                  <li><a href="http://twitter.github.com/bootstrap">Bootstrap</a></li>
+                  <li><a href="http://fortawesome.github.com/Font-Awesome/">Font-Awesome</a></li>
+                </ul>
             </div>
             <div class="offset3 span8">
                 <div class="span11">
+                    <h2 id="about" style="padding-top: 80px; margin-top: -80px;">About</h2>
+                    <p class="muted">
+                        A small bootstrap plugin that provide form input controls that feedback to the user as to whether their input was valid. <br/>
+                        <strong>Pelase Note:</strong> This plugin does <strong>NOT</strong> restrict form input/submission, it just provides visual feedback to the user. 
+                    </p>
                     <h2 id="examples" style="padding-top: 80px; margin-top: -80px;">Examples</h2>
                     <form>
                         <fieldset>
@@ -202,7 +211,8 @@
                                     </td>
                                     <td>
                                         12.34<br/>
-                                        0.23
+                                        0.23<br/>
+                                        33,00
                                     </td>
                                 </tr>
                                 <tr>
@@ -424,6 +434,23 @@
                     </tr>
                 </table>
 
+                <h2 id="changelog" style="padding-top: 80px; margin-top: -80px;">Change Log</h2>
+                <p>
+                    <h5>v0.3 26/2/2013</h5>
+                    <ul>
+                        <li>Fixed bug in currency matching. Not supports amounts without decimals and supports commas.</li>
+                        <li>Added ASP .Net MVC Html Helper class.</li>
+                    </ul>
+                    <h5>v0.2 23/2/2013</h5>
+                    <ul>
+                        <li>Fixed select listbox support</li>
+                        <li>Added additional data-type support (numbers, integer, decimal, currency, colour and URL)</li>
+                    </ul>
+                    <h5>v0.1 23/2/2013</h5>
+                    <ul>
+                        <li>Initial Release</li>
+                    </ul>
+                </p>
 
 
                 </div>
@@ -439,5 +466,17 @@
                 $('body').scrollspy({offset:85});
             });
         </script>
+        <!-- Piwik --> 
+        <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.marcusnoble.co.uk/" : "http://piwik.marcusnoble.co.uk/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+        </script><script type="text/javascript">
+        try {
+        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
+        piwikTracker.trackPageView();
+        piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+        </script><noscript><p><img src="http://piwik.marcusnoble.co.uk/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
+        <!-- End Piwik Tracking Code -->
     </body>
 </html>

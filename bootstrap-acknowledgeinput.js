@@ -1,5 +1,5 @@
 /* =========================================================
- * bootstrap-acknowledgeinput.js
+ * bootstrap-acknowledgeinput.js - v0.3
  * http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/
  * =========================================================
  * Requirements:
@@ -105,7 +105,7 @@
                     modify_classes(false, acknowledgeVars.icon_danger);
                 }
             } else if (data_type.toLowerCase() === "currency") {
-                re = /^(([0-9])+((\.)([0-9]){2,2})?)$/;
+                re = /^(([0-9])+((\.|,)?([0-9]){2,2})?)$/;
                 var isCurrency = re.test(inputEl.val());
 
                 if (isNotNullOrEmpty(inputEl.val()) && isCurrency) {

@@ -62,3 +62,19 @@ Using Bootstrap-AcknowledgeInput.js
         });
     </script>
     ```
+
+Change Log
+===================================
+v0.3 26/2/2013
+--------------
+- Fixed bug in currency matching. Not supports amounts without decimals and supports commas.
+- Added ASP .Net MVC Html Helper class.
+
+v0.2 23/2/2013
+--------------
+- Fixed select listbox support</li>
+- Added additional data-type support (numbers, integer, decimal, currency, colour and URL)
+
+v0.1 23/2/2013
+---------------
+- Initial Release
