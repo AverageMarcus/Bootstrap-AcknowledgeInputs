@@ -60,7 +60,7 @@
                     modify_classes(false, acknowledgeVars.icon_danger);
                 }
             } else if (data_type.toLowerCase() === "email") {
-                re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                re = /^(([^<>()\[\]\\.,;:\s@\"]+(\.[^<>()\[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                 var isEmail = re.test(inputEl.val());
 
                 if (isNotNullOrEmpty(inputEl.val()) && isEmail) {
@@ -117,13 +117,17 @@
                 re = /^#(([0-9a-f]){3}){1,2}$/;
                 var isColour = re.test(inputEl.val());
 
+                if (!isNotNullOrEmpty(inputEl.val()) && !isColour) {
+                    isColour = $('<span></span>').css({ color : 'transparent' }).css({ color : inputEl.val() }).css('color') !== 'transparent';
+                }
+
                 if (isNotNullOrEmpty(inputEl.val()) && isColour) {
                     modify_classes(true, acknowledgeVars.icon_success);
                 } else if (required || (isNotNullOrEmpty(inputEl.val()) && !isColour)) {
                     modify_classes(false, acknowledgeVars.icon_danger);
                 }
             } else if (data_type.toLowerCase() === "url") {
-                re = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+                re = /^(https?:\/\/)?([\da-z\.\-]+)\.([a-z\.]{2,6})([\/\w \.\-]*)*\/?$/;
                 var isUrl = re.test(inputEl.val());
 
                 if (isNotNullOrEmpty(inputEl.val()) && isUrl) {
