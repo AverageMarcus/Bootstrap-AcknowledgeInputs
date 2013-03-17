@@ -117,6 +117,10 @@
                 re = /^#(([0-9a-f]){3}){1,2}$/;
                 var isColour = re.test(inputEl.val());
 
+                if (!isNotNullOrEmpty(inputEl.val()) && !isColour) {
+                    isColour = $('<span></span>').css({ color : 'transparent' }).css({ color : inputEl.val() }).css('color') !== 'transparent';
+                }
+
                 if (isNotNullOrEmpty(inputEl.val()) && isColour) {
                     modify_classes(true, acknowledgeVars.icon_success);
                 } else if (required || (isNotNullOrEmpty(inputEl.val()) && !isColour)) {
