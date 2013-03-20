@@ -65,6 +65,10 @@ Using Bootstrap-AcknowledgeInput.js
 
 Change Log
 ===================================
+v0.4 20/3/2013
+--------------
+- Added support for all valid CSS colours, not just hexadecimal colours.
+
 v0.3 26/2/2013
 --------------
 - Fixed bug in currency matching. Not supports amounts without decimals and supports commas.
