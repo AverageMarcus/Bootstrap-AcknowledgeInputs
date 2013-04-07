@@ -36,7 +36,8 @@
             danger_color: "#bd362f",
             icon_success: "icon-ok",
             icon_danger: "icon-warning-sign",
-            update_on: "change"
+            update_on: "change",
+            default_state: "visible"
         };
 
         var updateIcons = function (inputEl) {
@@ -139,6 +140,9 @@
 
         $('[data-role=acknowledge-input]').find('input:not([type=radio]):not([type=checkbox]),textarea,select').each(function () {
             updateIcons($(this));
+            if (acknowledgeVars.default_state != 'visible') {
+                $(this).parent().find('[data-role=acknowledgement]').addClass('add-on').find('i').removeClass();
+            }
         }).on(acknowledgeVars.update_on, function () {
             updateIcons($(this));
         });
