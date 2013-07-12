@@ -65,6 +65,11 @@ Using Bootstrap-AcknowledgeInput.js
 
 Change Log
 ===================================
+v0.5 12/7/2013
+--------------
+- Fixed issue #6 - Inputting value using jQuery val() not triggering update
+- Fixed issue #8 - Added the ability to provide a custom regex pattern to match against
+
 v0.4 20/3/2013
 --------------
 - Added support for all valid CSS colours, not just hexadecimal colours.

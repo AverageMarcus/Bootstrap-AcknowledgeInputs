@@ -1,5 +1,5 @@
 /* =========================================================
- * bootstrap-acknowledgeinput.js - v0.4
+ * bootstrap-acknowledgeinput.js - v0.5
  * http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/
  * =========================================================
  * Requirements:
@@ -54,6 +54,7 @@
             var re;
             var data_type = inputEl.data('type') === undefined ? "text" : inputEl.data('type');
             var required = inputEl.attr("required") === undefined ? false : inputEl.attr("required").toLowerCase() === "required";
+            var pattern = inputEl.data('pattern') === undefined ? "" : inputEl.data('pattern');
 
             if (data_type.toLowerCase() === "text") {
                 if (isNotNullOrEmpty(inputEl.val())) {
@@ -132,6 +133,15 @@
                 } else if (required || (isNotNullOrEmpty(inputEl.val()) && !isUrl)) {
                     modify_classes(false, acknowledgeVars.icon_danger);
                 }
+            } else if (data_type.toLowerCase() === "custom") {
+                re = new RegExp(pattern, "i");
+                var isUrl = re.test(inputEl.val());
+
+                if (isNotNullOrEmpty(inputEl.val()) && isUrl) {
+                    modify_classes(true, acknowledgeVars.icon_success);
+                } else if (required || (isNotNullOrEmpty(inputEl.val()) && !isUrl)) {
+                    modify_classes(false, acknowledgeVars.icon_danger);
+                }
             }
 
             
@@ -162,6 +172,6 @@
               };
             })(jQuery);
         }
-        
+
     };
 }) ( window.jQuery );
