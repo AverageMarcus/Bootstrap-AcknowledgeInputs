@@ -37,7 +37,8 @@
             icon_success: "icon-ok",
             icon_danger: "icon-warning-sign",
             update_on: "change",
-            default_state: "visible"
+            default_state: "visible",
+            override_val: true
         };
 
         var updateIcons = function (inputEl) {
@@ -146,5 +147,21 @@
         }).on(acknowledgeVars.update_on, function () {
             updateIcons($(this));
         });
+
+
+        if(acknowledgeVars.override_val){
+            (function ($) {
+              var originalVal = $.fn.val;
+              $.fn.val = function(value) {
+                if (value !== undefined) {
+                    if(this.parent().data("role") === "acknowledge-input"){
+                        return originalVal.call(this, value).change();
+                    }
+                }
+                return originalVal.apply(this, arguments);
+              };
+            })(jQuery);
+        }
+        
     };
 }) ( window.jQuery );
