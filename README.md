@@ -65,6 +65,9 @@ Using Bootstrap-AcknowledgeInput.js
 
 Change Log
 ===================================
+v0.6 29/10/2013
+--------------
+- Fixed issue #9 - Space was incorrectly validating
 v0.5 12/7/2013
 --------------
 - Fixed issue #6 - Inputting value using jQuery val() not triggering update

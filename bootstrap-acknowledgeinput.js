@@ -1,5 +1,5 @@
 /* =========================================================
- * bootstrap-acknowledgeinput.js - v0.5
+ * bootstrap-acknowledgeinput.js - v0.6
  * http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/
  * =========================================================
  * Requirements:
@@ -47,7 +47,7 @@
                 inputEl.parent().find('[data-role=acknowledgement]').css('color', colour).find('i').removeClass().addClass(iconClass);
             }
             function isNotNullOrEmpty(value){
-                return (inputEl.val() !== "" && inputEl.val() !== null);
+                return (inputEl.val() !== null && inputEl.val() !== undefined && inputEl.val().trim() !== "");
             }
             //Setup default
             inputEl.parent().find('[data-role=acknowledgement]').addClass('add-on').find('i').removeClass();
