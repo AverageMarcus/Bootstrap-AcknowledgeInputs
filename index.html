@@ -36,7 +36,6 @@
                   <li><a href="#options">Options</a></li>
                   <li><a href="#layout">Layout Variations</a></li>
                   <li><a href="#inputs">Supported Inputs</a></li>
-                  <li><a href="#notes">Notes</a></li>
                   <li><a href="#changelog">Change Log</a></li>
                   <li class="divider"></li>
                 </ul>
@@ -47,7 +46,7 @@
                 </p>
                 <h4>Download</h4>
                 <a href="https://raw.github.com/AverageMarcus/Bootstrap-AcknowledgeInputs/master/bootstrap-acknowledgeinput.min.js" class="btn btn-primary">Download Latest Version</a><br/>
-                <small>Last Updated: 12/7/2013 (v0.5)</small>
+                <small>Last Updated: 26/2/2013 (v0.3)</small>
                 <h4>Resources</h4>
                 <ul class="nav nav-list" id="navbar">
                   <li><a href="http://jquery.com/">jQuery</a></li>
@@ -60,7 +59,7 @@
                     <h2 id="about" style="padding-top: 80px; margin-top: -80px;">About</h2>
                     <p class="muted">
                         A small bootstrap plugin that provide form input controls that feedback to the user as to whether their input was valid. <br/>
-                        <strong>Please Note:</strong> This plugin does <strong>NOT</strong> restrict form input/submission, it just provides visual feedback to the user. 
+                        <strong>Pelase Note:</strong> This plugin does <strong>NOT</strong> restrict form input/submission, it just provides visual feedback to the user. 
                     </p>
                     <h2 id="examples" style="padding-top: 80px; margin-top: -80px;">Examples</h2>
                     <form>
@@ -242,18 +241,6 @@
                                         http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th>Custom</th>
-                                    <td>
-                                        <div class="span12 input-append" data-role="acknowledge-input">
-                                            <input type="text" required="required" placeholder="Custom Required" class="input-xlarge" data-type="custom" data-pattern="^(\-)?([0-9])+$" />
-                                            <div data-role="acknowledgement"><i></i></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        Provide a custom regex pattern by supplying the 'data-pattern' attribute
-                                    </td>
-                                </tr>
                             </table>
                         </fieldset>
                     </form>                 
@@ -332,18 +319,6 @@
                             <td>event</td>
                             <td>change</td>
                             <td>Sets the event to perform the icon update method. Possible options are <code>change</code>, <code>keydown</code>, <code>keyup</code>, <code>focus</code> & <code>blur</code>.</td>
-                        </tr>
-                        <tr>
-                            <td>default_state</td>
-                            <td>string</td>
-                            <td>visible</td>
-                            <td>Set this option to anything except "visible" to hide the exclamation mark</td>
-                        </tr>
-                        <tr>
-                            <td>override_val</td>
-                            <td>boolean</td>
-                            <td>true</td>
-                            <td>By default this plugin overrides the default behaviour of the jQuery val() method to fire a change event when used. See notes below.</td>
                         </tr>
                     </table>
                     <h3>Options Example</h3>
@@ -459,20 +434,12 @@
                     </tr>
                 </table>
 
-                <h2 id="notes" style="padding-top: 80px; margin-top: -80px;">Notes</h2>
-                <p>
-                    To overcome an issue with the jQuery val() method not triggering an event on change this plugin overrides the default behaviour to allow this.<br/>
-                    To disable this simply call the plugin with the following options:
-<pre class="prettyprint">
-        $().acknowledgeinput({
-            override_val: false
-        });
-</pre>    
-
-                </p>
-
                 <h2 id="changelog" style="padding-top: 80px; margin-top: -80px;">Change Log</h2>
                 <p>
+                    <h5>v0.6 12/7/2013</h5>
+                    <ul>
+                        <li>Fixed issue #9 - Space was incorrectly validating</li>
+                    </ul>                    
                     <h5>v0.5 12/7/2013</h5>
                     <ul>
                         <li>Fixed issue #6 - Inputting value using jQuery val() not triggering update</li>
@@ -512,17 +479,5 @@
                 $('body').scrollspy({offset:85});
             });
         </script>
-        <!-- Piwik --> 
-        <script type="text/javascript">
-        var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.marcusnoble.co.uk/" : "http://piwik.marcusnoble.co.uk/");
-        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-        </script><script type="text/javascript">
-        try {
-        var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 2);
-        piwikTracker.trackPageView();
-        piwikTracker.enableLinkTracking();
-        } catch( err ) {}
-        </script><noscript><p><img src="http://piwik.marcusnoble.co.uk/piwik.php?idsite=2" style="border:0" alt="" /></p></noscript>
-        <!-- End Piwik Tracking Code -->
     </body>
 </html>
