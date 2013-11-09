@@ -3,18 +3,18 @@ Bootstrap-AcknowledgeInputs
 
 A small bootstrap plugin that provide form input controls that feedback to the user as to whether their input was valid.
 
-http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/ for examples and more options.
+http://averagemarcus.github.io/Bootstrap-AcknowledgeInputs/ for examples and more options.
 
 An example is provided that includes all necessary javascript and stylesheets.
 
 Required
 ===================================
 - jQuery - http://jquery.com/ 
-- Bootstrap - http://twitter.github.com/bootstrap/
+- Bootstrap (2.3.2) - https://github.com/twbs/bootstrap/tree/v2.3.2
 
 Recommended
 ===================================
-- Font-Awesome - https://github.com/FortAwesome/Font-Awesome
+- Font-Awesome (3.2.1) - https://github.com/FortAwesome/Font-Awesome/tree/v3.2.1
 
 
 Using Bootstrap-AcknowledgeInput.js
@@ -65,9 +65,16 @@ Using Bootstrap-AcknowledgeInput.js
 
 Change Log
 ===================================
+v0.7 09/11/2013
+--------------
+- Replaced multiple .toLowerCase() with a single call.
+- Added missing semicolon.
+- Removed example folder - Example available at http://averagemarcus.github.io/Bootstrap-AcknowledgeInputs/
+
 v0.6 29/10/2013
 --------------
 - Fixed issue #9 - Space was incorrectly validating
+
 v0.5 12/7/2013
 --------------
 - Fixed issue #6 - Inputting value using jQuery val() not triggering update
