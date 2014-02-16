@@ -9,8 +9,10 @@ An example is provided that includes all necessary javascript and stylesheets.
 
 Required
 ===================================
-- jQuery - http://jquery.com/ 
+- jQuery - http://jquery.com/
 - Bootstrap (2.3.2) - https://github.com/twbs/bootstrap/tree/v2.3.2
+OR
+- Bootstrap (3.x) - http://getbootstrap.com/
 
 Recommended
 ===================================
@@ -21,7 +23,7 @@ Using Bootstrap-AcknowledgeInput.js
 ===================================
 
 1. Make sure you include all the required files:
-    
+
     ```html
     <html lang="en">
         <head>
@@ -34,7 +36,7 @@ Using Bootstrap-AcknowledgeInput.js
             <script type="text/javascript" src="js/bootstrap.min.js" ></script>
             <script type="text/javascript" src="js/bootstrap-acknowledgeinput.min.js" ></script>
         </body>
-    </html> 
+    </html>
     ```
 
 2. Define your form with new acknowledge inputs
@@ -65,6 +67,10 @@ Using Bootstrap-AcknowledgeInput.js
 
 Change Log
 ===================================
+v1.0 16/2/2014
+--------------
+- Added support for Bootstrap 3.x
+
 v0.7 09/11/2013
 --------------
 - Replaced multiple .toLowerCase() with a single call.
