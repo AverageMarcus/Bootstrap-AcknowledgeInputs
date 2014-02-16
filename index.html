@@ -11,10 +11,10 @@
         h2{border-bottom:1px solid #ccc;}
         .container-fluid{margin-top:80px;}
         @media (max-width: 480px) {
-            #navHolder{ position:relative;margin-top:-50px;} 
+            #navHolder{ position:relative;margin-top:-50px;}
         }
         @media (max-height: 600px) {
-            #navHolder{ position:absolute;} 
+            #navHolder{ position:absolute;}
         }
     </style>
     </head>
@@ -46,7 +46,7 @@
                 </p>
                 <h4>Download</h4>
                 <a href="https://raw.github.com/AverageMarcus/Bootstrap-AcknowledgeInputs/master/bootstrap-acknowledgeinput.min.js" class="btn btn-primary">Download Latest Version</a><br/>
-                <small>Last Updated: 09/11/2013 (v0.7)</small>
+                <small>Last Updated: 16/02/2014 (v1.0)</small>
                 <h4>Resources</h4>
                 <ul class="nav nav-list" id="navbar">
                   <li><a href="http://jquery.com/">jQuery</a></li>
@@ -59,7 +59,10 @@
                     <h2 id="about" style="padding-top: 80px; margin-top: -80px;">About</h2>
                     <p class="muted">
                         A small bootstrap plugin that provide form input controls that feedback to the user as to whether their input was valid. <br/>
-                        <strong>Pelase Note:</strong> This plugin does <strong>NOT</strong> restrict form input/submission, it just provides visual feedback to the user. 
+                        <strong>Pelase Note:</strong> This plugin does <strong>NOT</strong> restrict form input/submission, it just provides visual feedback to the user.
+                    </p>
+                    <p class="muted">
+                        <strong>Bootstrap 3.x users:</strong> Please note the examples below are all using Bootstrap 2.3.2. As of version 1.0 Bootstrap-AcknowledgeInputs supports Bootstrap 3.x and can (optionally) take in the <code>"bootstrap_version"</code> option when calling <code>$().acknowledgeinput();</code> but will support both 2.3.2 and 3.x if not supplied. Make sure you replace the <code>input-append</code> class with the <code>input-group</code> class in the examples below and add the <code>form-control</code> class to the input element.
                     </p>
                     <h2 id="examples" style="padding-top: 80px; margin-top: -80px;">Examples</h2>
                     <form>
@@ -129,7 +132,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        "Bootstrap" 
+                                        "Bootstrap"
                                     </td>
                                 </tr>
                                 <tr>
@@ -243,7 +246,7 @@
                                 </tr>
                             </table>
                         </fieldset>
-                    </form>                 
+                    </form>
                     <h2 id="using" style="padding-top: 80px; margin-top: -80px;">Using Bootstrap-AcknowledgeInput.js</h2>
                     <ol>
                         <li>Make sure you include all the required files:</li>
@@ -259,7 +262,7 @@
         &lt;script type="text/javascript" src="js/bootstrap.min.js" &gt;&lt;/script&gt;
         &lt;script type="text/javascript" src="js/bootstrap-acknowledgeinput.min.js" &gt;&lt;/script&gt;
     &lt;/body&gt;
-&lt;/html&gt; 
+&lt;/html&gt;
 </pre>
                     <li>Define your form with new acknowledge inputs</li>
 <pre class="prettyprint">
@@ -270,7 +273,7 @@
         &lt;div data-role=&quot;acknowledgement&quot;&gt;&lt;i&gt;&lt;/i&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/form&gt;
-</pre>      
+</pre>
                     <p class="text-info">
                         The key things to note here is the use of <code>data-role</code> and <code>data-type</code> (optional). <br/>
                         The <code>data-type</code> attribute tells the plugin what format the input text should be to warrant a success.<br/>
@@ -332,7 +335,7 @@
         });
     });
 &lt;/script&gt;
-</pre>      
+</pre>
                 <h2 id="layout" style="padding-top: 80px; margin-top: -80px;">Layout Variations</h2>
                 <h3>Append</h3>
                 <div class="input-append" data-role="acknowledge-input">
@@ -429,23 +432,27 @@
                         <th>Input [type="checkbox"], Input [type="radio"], Input [type="submit"], Button</th>
                         <td>
                             <p class="text-error">No planned support</p>
-                            
+
                         </td>
                     </tr>
                 </table>
 
                 <h2 id="changelog" style="padding-top: 80px; margin-top: -80px;">Change Log</h2>
                 <p>
+                    <h5>v1.0 16/2/2014</h5>
+                    <ul>
+                        <li>Fixed issue #10 - Added Bootstrap 3 support</li>
+                    </ul>
                     <h5>v0.7 09/11/2013</h5>
                     <ul>
                         <li>Replaced multiple .toLowerCase() with a single call.</li>
                         <li>Added missing semicolon.</li>
                         <li>Removed example folder - Example available at http://averagemarcus.github.io/Bootstrap-AcknowledgeInputs/</li>
-                    </ul>  
+                    </ul>
                     <h5>v0.6 12/7/2013</h5>
                     <ul>
                         <li>Fixed issue #9 - Space was incorrectly validating</li>
-                    </ul>                    
+                    </ul>
                     <h5>v0.5 12/7/2013</h5>
                     <ul>
                         <li>Fixed issue #6 - Inputting value using jQuery val() not triggering update</li>
