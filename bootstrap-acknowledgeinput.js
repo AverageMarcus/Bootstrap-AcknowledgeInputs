@@ -27,19 +27,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================= */
-
+/* globals jQuery */
 (function ($) {
   "use strict";
   $.fn.acknowledgeinput = function (options) {
     var acknowledgeVars = {
-        success_color: "#468847",
-        danger_color: "#bd362f",
-        icon_success: "icon-ok",
-        icon_danger: "icon-warning-sign",
-        update_on: "change",
-        default_state: "visible",
-        override_val: true,
-        bootstrap_version : 0,
+            success_color: "#468847",
+            danger_color: "#bd362f",
+            icon_success: "icon-ok",
+            icon_danger: "icon-warning-sign",
+            update_on: "change",
+            default_state: "visible",
+            override_val: true,
+            bootstrap_version: 0
       },
       addOnClass,
       updateIcons;
