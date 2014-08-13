@@ -1,5 +1,5 @@
 /* =========================================================
- * bootstrap-acknowledgeinput.js - v1.0
+ * bootstrap-acknowledgeinput.js - v1.1
  * http://averagemarcus.github.com/Bootstrap-AcknowledgeInputs/
  * =========================================================
  * Requirements:
@@ -34,8 +34,8 @@
     var acknowledgeVars = {
             success_color: "#468847",
             danger_color: "#bd362f",
-            icon_success: "icon-ok",
-            icon_danger: "icon-warning-sign",
+            icon_success: "icon-ok fa fa-check",
+            icon_danger: "icon-warning-sign fa fa-warning",
             update_on: "change",
             default_state: "visible",
             override_val: true,

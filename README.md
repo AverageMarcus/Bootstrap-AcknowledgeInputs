@@ -67,6 +67,10 @@ Using Bootstrap-AcknowledgeInput.js
 
 Change Log
 ===================================
+v1.1 16/2/2014
+--------------
+- Added support for FontAwesome 4
+
 v1.0 16/2/2014
 --------------
 - Added support for Bootstrap 3.x
