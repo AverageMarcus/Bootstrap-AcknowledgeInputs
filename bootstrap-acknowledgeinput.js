@@ -31,18 +31,8 @@
 (function ($) {
   "use strict";
   $.fn.acknowledgeinput = function (options) {
-    var acknowledgeVars = {
-            success_color: "#468847",
-            danger_color: "#bd362f",
-            icon_success: "icon-ok fa fa-check",
-            icon_danger: "icon-warning-sign fa fa-warning",
-            update_on: "change",
-            default_state: "visible",
-            override_val: true,
-            bootstrap_version: 0
-      },
-      addOnClass,
-      updateIcons;
+    var acknowledgeVars = $.fn.acknowledgeinput.defaults,
+      addOnClass, updateIcons;
 
     updateIcons = function (inputEl) {
       var re, data_type, required, pattern,
@@ -187,5 +177,15 @@
       }(jQuery));
     }
 
+  };
+  $.fn.acknowledgeinput.defaults = {
+    success_color: "#468847",
+    danger_color: "#bd362f",
+    icon_success: "icon-ok fa fa-check",
+    icon_danger: "icon-warning-sign fa fa-warning",
+    update_on: "change",
+    default_state: "visible",
+    override_val: true,
+    bootstrap_version: 0
   };
 }(window.jQuery));
